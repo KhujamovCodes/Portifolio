@@ -1,0 +1,119 @@
+/* Colors */
+:root {
+    --black: #333;
+    --dark-red: rgba(255, 0, 0, 0.5);
+    --grey: #666;
+    --lighter-black: #19292e;
+    --red: rgba(255, 0, 0, 0.75);
+    --white: #f9fcff;
+}
+
+/* Basic Setup */
+
+html {
+    box-sizing: border-box;
+    min-width: 400px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+::selection,
+::-moz-selection {
+    background: var(--red);
+    color: var(--lighter-black);
+}
+
+/* Text styles */
+@font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Open Sans"), local("OpenSans"),
+        url(https://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff)
+            format("woff");
+}
+
+@font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 700;
+    src: local("Open Sans Bold"), local("OpenSans-Bold"),
+        url(https://fonts.gstatic.com/s/opensans/v13/k3k702ZOKiLJc3WVjuplzKRDOzjiPcYnFooOUGCOsRk.woff)
+            format("woff");
+}
+
+html {
+    background: var(--white);
+    color: var(--black);
+    font-size: 10px;
+    font-family: "Avenir Next", Open Sans, sans-serif;
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-size: 1.8rem;
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+
+h2 {
+    font-size: 4.7em;
+}
+
+h3 {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--lighter-black);
+}
+
+p,
+li {
+    font-size: 2rem;
+    line-height: 1.5;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    box-shadow: inset 0 -0.5em var(--dark-red);
+    color: var(--black);
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0, 1, 0.3, 1);
+}
+
+a:hover {
+    box-shadow: inset 0 -1.5em var(--red);
+    color: var(--white);
+}
+
+.white-text {
+    color: var(--white) !important;
+}
+
+.red-text {
+    color: var(--red);
+}
+
+.text-center {
+    text-align: center !important;
+}

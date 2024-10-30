@@ -1,0 +1,56 @@
+/*/////////////////////////////////
+// Media Queries
+/////////////////////////////////*/
+
+@media only screen and (max-width: 700px) {
+    .grid-list {
+        grid-template-columns: repeat(3, minmax(100px, 1fr));
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        min-height: 800px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .main-photo {
+        top: 0;
+        left: 0;
+    }
+
+    .heading {
+        top: 50%;
+        width: 20em;
+    }
+
+    .intro {
+        font-size: 6em;
+    }
+
+    .lead {
+        font-size: 1.5em;
+        width: 100%;
+    }
+
+    .grid-list {
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .contact-form {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    h2 {
+        font-size: 3.7em;
+    }
+
+    .contact-form {
+        grid-template-columns: 1fr;
+    }
+}

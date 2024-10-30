@@ -1,0 +1,224 @@
+/* General Styles */
+.grid-list {
+    display: grid;
+    grid-row-gap: 40px;
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+    text-align: center;
+}
+
+.grid-list > li > a:hover {
+    color: var(--red);
+}
+
+section {
+    align-content: center;
+    display: grid;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px 30px 100px 30px;
+}
+
+section > div {
+    max-width: 1000px;
+    overflow: hidden;
+}
+
+.svg-image {
+    fill: var(--white);
+    height: 80px;
+    padding: 5px;
+    width: 80px;
+}
+
+/* Header Styles */
+header {
+    height: 100vh;
+    min-height: 1200px;
+    overflow: hidden;
+    position: relative;
+}
+
+header:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.heading {
+    color: var(--lighter-black);
+    line-height: 1;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-shadow: -1px -1px 0 var(--white), 1px -1px 0 var(--white),
+        -1px 1px 0 var(--white), 1px 1px 0 var(--white);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 30em;
+    z-index: 10;
+}
+
+.intro {
+    font-size: 8em;
+    margin-bottom: 0;
+}
+
+.lead {
+    color: var(--grey);
+    font-size: 2em;
+    margin-bottom: 60px;
+}
+
+.header-btn {
+    background: var(--lighter-black);
+    border: 2px solid var(--lighter-black);
+    border-radius: 4px;
+    box-shadow: none;
+    color: var(--white);
+    cursor: pointer;
+    font-size: 90%;
+    font-weight: normal;
+    padding: 20px;
+    text-shadow: none;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.header-btn:hover {
+    background: var(--white);
+    box-shadow: none;
+    color: var(--lighter-black);
+}
+
+.main-photo {
+    background: url(../img/karl.jpg);
+    background-position: center;
+    background-size: cover;
+    border: 7px solid var(--lighter-black);
+    border-radius: 50%;
+    height: 20em;
+    position: absolute;
+    top: calc(45% - 25.5em);
+    left: calc(50% - 25em);
+    width: 20em;
+}
+
+.main-photo:before {
+    border: 7px solid var(--white);
+    border-radius: 50%;
+    content: " ";
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    left: 1px;
+    z-index: -1;
+}
+
+/* Portfolio Styles */
+
+.portfolio-img svg {
+    fill: var(--lighter-black);
+    width: 100%;
+}
+
+.portfolio-img {
+    -webkit-transform: translateY(5em);
+    transform: translateY(5em);
+}
+
+.section-lead {
+    margin-bottom: 60px;
+}
+
+/* Social Styles */
+#social-contact {
+    cursor: pointer;
+}
+
+/* Contact Form Styles */
+
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+input,
+textarea,
+button {
+    background: var(--white);
+    border: 5px solid var(--lighter-black);
+    border-radius: 4px;
+    padding: 1em;
+    width: 100%;
+}
+
+input:active,
+textarea:active {
+    outline: var(--red);
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+}
+
+.contact-form {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+}
+
+#contact-form-no-bots,
+#contact-form-message,
+#contact-form-submit {
+    grid-column: 1 / -1;
+}
+
+#contact-form-submit {
+    background-color: var(--lighter-black);
+    color: var(--white);
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+#contact-form-submit:hover {
+    background-color: var(--white);
+    color: var(--lighter-black);
+}
+
+#contact-form-submit:active {
+    background-color: var(--red);
+    color: var(--lighter-black);
+}
+
+/* Footer Styles */
+footer {
+    background: var(--black);
+    color: var(--white);
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* General Styles */
+.dark-bg {
+    background: var(--lighter-black);
+    color: var(--white);
+}
+
+.dark-bg a {
+    color: var(--white);
+    transition: all 0.4s cubic-bezier(0, 1, 0.3, 1);
+}
+
+.dark-bg a:hover {
+    color: var(--black);
+}

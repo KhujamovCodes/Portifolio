@@ -1,0 +1,83 @@
+/*/////////////////////////////////
+// Animation Styles
+/////////////////////////////////*/
+
+/* Header */
+header {
+    opacity: 0;
+    -webkit-transition: opacity 0.5s 0.25s ease-out;
+    transition: opacity 0.5s 0.25s ease-out;
+}
+
+header.is-visible {
+    opacity: 1;
+}
+
+.main-photo {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+}
+
+.heading {
+    -webkit-transform: translate(-50%, calc(-50% + 5em));
+    transform: translate(-50%, calc(-50% + 5em));
+}
+
+.is-visible .main-photo {
+    -webkit-transform: none;
+    transform: none;
+}
+
+.is-visible .heading {
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.main-photo,
+.heading {
+    -webkit-transition: -webkit-transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1);
+    transition: -webkit-transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1);
+    transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1);
+    transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1),
+        -webkit-transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1);
+    will-change: transform;
+}
+
+/* Icons Grid List / Portfolio */
+
+.grid-list,
+.portfolio-img {
+    opacity: 0;
+    -webkit-transition: opacity 0.3s 0.25s ease-out,
+        -webkit-transform 1.5s 0.25s cubic-bezier(0, 1, 0.3, 1);
+    transition: opacity 0.3s 0.25s ease-out,
+        -webkit-transform 1.5s 0.25s cubic-bezier(0, 1, 0.3, 1);
+    transition: transform 1.5s 0.25s cubic-bezier(0, 1, 0.3, 1),
+        opacity 0.3s 0.25s ease-out;
+    transition: transform 1.5s 0.25s cubic-bezier(0, 1, 0.3, 1),
+        opacity 0.3s 0.25s ease-out,
+        -webkit-transform 1.5s 0.25s cubic-bezier(0, 1, 0.3, 1);
+    will-change: transform, opacity;
+}
+
+.grid-list.slide-left {
+    -webkit-transform: translateX(-4em);
+    transform: translateX(-4em);
+}
+
+.grid-list.slide-right {
+    -webkit-transform: translateX(4em);
+    transform: translateX(4em);
+}
+
+.grid-list.is-visible {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.portfolio-img.is-visible {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
