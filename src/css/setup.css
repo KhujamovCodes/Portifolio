@@ -1,11 +1,11 @@
 /* Colors */
 :root {
-    --black: #333;
+    --black: #000000;
     --dark-red: rgba(255, 0, 0, 0.5);
     --grey: #666;
-    --lighter-black: #19292e;
+    --lighter-black: #FEAB02;
     --red: rgba(255, 0, 0, 0.75);
-    --white: #f9fcff;
+    --white: #131313;
 }
 
 /* Basic Setup */
