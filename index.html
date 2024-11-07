@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="./src/css/styles.css" />
         <link rel="stylesheet" href="./src/css/animations.css" />
         <link rel="stylesheet" href="./src/css/media-queries.css" />
+        <script src="https://www.google.com/recaptcha/enterprise.js?render=6Lf5y3cqAAAAAOIFWQEvgNF88ftoBj6zhtSYAn78"></script>
     </head>
 
     <body>
@@ -17,7 +18,7 @@
         <header class="header show-on-scroll">
             <div class="main-photo"></div>
             <div class="heading">
-                <h1 class="intro">Hi, my name is Karl</h1>
+                <h1 class="intro">Hi, my name is ixva</h1>
                 <p class="lead">
                     I'm a web developer and teacher. I love JavaScript, Node.js,
                     jQuery, and Python.
@@ -504,55 +505,35 @@
 
             <form class="contact-form" method="POST" action="https://formspree.io/f/myzywdeq">
                 <fieldset id="contact-form-name">
-                    <label for="name"
-                        >Ism<span class="red-text">*</span></label
-                    >
-                    <input
-                        type="text"
-                        name="name"
-                        id="name"
-                        placeholder="Khujamov"
-                        required
-                    />
+                    <label for="name">Ism<span class="red-text">*</span></label>
+                    <input type="text" name="name" id="name" placeholder="Khujamov" required />
                 </fieldset>
+                
                 <fieldset id="contact-form-email">
-                    <label for="email"
-                        >Email<span class="red-text">*</span></label
-                    >
-                    <input
-                        type="email"
-                        name="email"
-                        id="email"
-                        placeholder="khujamovcodes@gmail.com"
-                        required
-                    />
+                    <label for="email">Email<span class="red-text">*</span></label>
+                    <input type="email" name="email" id="email" placeholder="khujamovcodes@gmail.com" required />
                 </fieldset>
+                
                 <fieldset id="contact-form-no-bots">
                     <label for="bots">Please leave this field empty</label>
-                    <input
-                        type="text"
-                        name="bots"
-                        id="bots"
-                        placeholder="No bots allowed"
-                    />
+                    <input type="text" name="bots" id="bots" placeholder="No bots allowed" />
                 </fieldset>
+                
                 <fieldset id="contact-form-message">
-                    <label for="message"
-                        >Xabar<span class="red-text">*</span></label
-                    >
-                    <textarea
-                        name="message"
-                        id="message"
-                        placeholder="Hi, how are you? Are you available to talk at 18:00 on the twelfth?"
-                        cols="30"
-                        rows="18"
-                        required
-                    ></textarea>
+                    <label for="message">Xabar<span class="red-text">*</span></label>
+                    <textarea name="message" id="message" placeholder="Hi, how are you? Are you available to talk at 18:00 on the twelfth?" cols="30" rows="18" required></textarea>
                 </fieldset>
+                
+                <!-- reCAPTCHA Widget -->
+                <fieldset id="contact-form-recaptcha">
+                    <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+                </fieldset>
+                
                 <button id="contact-form-submit" type="submit">
                     Yuborish
                 </button>
             </form>
+            
         </section>
 
         <!-- Footer -->
@@ -565,5 +546,7 @@
         </footer>
 
         <script src="./src/js/script.js"></script>
+        <!-- Include reCAPTCHA Script -->
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </body>
 </html>
